@@ -1,0 +1,152 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #30668a;
+  --bg-color: white;
+  --box-color: rgba(255, 255, 255, 0.5);
+  --sec-color: #606062;
+  --bg-url: url(./assets/bg-emc.png);
+  --button-url: url(./assets/sun.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-color: #0e8dcc;
+  --box-color: rgba(14, 141, 204, 0.5);
+  --sec-color: white;
+  --bg-url: url(./assets/bg-emc-dark.png);
+  --button-url: url(./assets/moon-stars.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  width: 360px;
+  margin: 24px auto 0px;
+  padding: 0px 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px 0 0 0;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#switch {
+  width: 64px;
+  position: relative;
+  margin: 24px auto;
+}
+
+#switch button {
+  height: 32px;
+  width: 32px;
+  background: var(--bg-color) var(--button-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.dark button {
+  left: 0;
+}
+
+#switch span {
+  display: block;
+  height: 24px;
+  width: 64px;
+  background: var(--box-color);
+  border: 1px solid var(--bg-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  height: 52px;
+  border: 1px solid var(--bg-color);
+  border-radius: 15px;
+  background: var(--box-color);
+  backdrop-filter: blur(4px);
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+#redes {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px 0px 0px;
+}
+
+#redes a {
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--sec-color);
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+#redes a:hover {
+  background: var(--bg-color);
+  padding: 16px;
+}
+
+#arroba {
+  text-align: center;
+  color: var(--text-color);
+}
+
+footer {
+  padding: 24px 0px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--sec-color);
+}
