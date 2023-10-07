@@ -70,10 +70,16 @@ body * {
   right: 0;
   z-index: 1;
   transform: translateY(-50%);
+  transition: all 0.4s;
+  animation: slide-light 0.4s;
 }
 
-.dark button {
-  left: 0;
+#switch button:hover {
+  outline: 5px solid #60606227;
+}
+
+.dark #switch button {
+  animation: slide-dark 0.4s forwards;
 }
 
 #switch span {
@@ -160,4 +166,22 @@ footer a {
   .dark {
     --bg-url: url(./assets/bg-emc-dark.png);
   }
-} 
+}
+
+@keyframes slide-dark {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
+  }
+}
+
+@keyframes slide-light {
+  from {
+    right: 50%;
+  }
+  to {
+    right: 0;
+  }
+}
