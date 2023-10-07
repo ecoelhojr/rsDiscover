@@ -30,6 +30,7 @@ body {
   background-size: cover;
   */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -151,3 +152,12 @@ footer {
 footer a {
   color: var(--sec-color);
 }
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-emc.png);
+  }
+  .dark {
+    --bg-url: url(./assets/bg-emc-dark.png);
+  }
+} 
